@@ -74,9 +74,13 @@ $('#s').click(function(){
 
 
 
-$(function(){
-            $('.menu_page1').delay(1500).slideUp(500);
+      $(function(){
+            $(window).load(function() {
+                $('.menu_page1').delay(1000).slideUp(500);
+            });
         });
+
+
 
 
 $(function(){

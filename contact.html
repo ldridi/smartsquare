@@ -21,10 +21,35 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style type="text/css">
+    a{
+      text-decoration: none;
+      color: white;
+    }
+    a:hover{
+      text-decoration: none;
+      color: white;
+    }
+    </style>
   </head>
   <body>
+
     <div class="contenu">
+    <div class="menu_page" style="position:fixed;background:rgba(53, 125, 173,0.9);width:100%;height:100vh;z-index:9;display:none;">
+         <div class="row">
+            <div class="col-md-6 col-xs-6 col-lg-offset-3 col-xs-offset-3" style="position:absolute;top:30%;">
+               <ul class="list-group list_menu">
+                  <li class="list-group-item" ><a href="index.html#Simplicity">Simplicity</a></li>
+                  <li class="list-group-item"><a href="index.html#Mesureable">Mesureable</a></li>
+                  <li class="list-group-item" ><a href="index.html#Accessibility">Accessibility</a></li>
+                  <li class="list-group-item" ><a href="index.html#Result">Result</a></li>
+                  <li class="list-group-item" ><a href="index.html#Time">Time & Again</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
       <div class="row">
+
           <div class="col-md-12">
               <div class="top">
                   <div class="row">
@@ -35,7 +60,7 @@
                           <img src="image/contact.png" class="logo_contact pull-right" width="50">
                       </div>
                       <div class="col-md-12"  >
-                          <p style="margin-top:-30px;">
+                          <p style="margin-top:-10px;">
                                   <h1 class="text1 text-center">Say hi,</h1>
                               </p>
                               <p class="text-center">
@@ -60,6 +85,7 @@
                   </div>
               </div>
           </div>
+
           <div class="col-md-12">
               <div class="bottom">
                   <div class="row">
@@ -69,26 +95,9 @@
                       <div class="col-md-12">
                           
                               <p class="text-center" style="padding-right:4%;padding-top:1%;">
-                                    <div class="parent2">
-                                      <a href="index-2.html#section5" class="scroll">
-                                        <div class="test1"><b style="color:#2976A9;font-size:20px;">T</b></div>
-                                      </a>
-                                      <a href="index-2.html#section4" class="scroll">
-                                        <div class="test2"><b style="color:#2976A9;font-size:20px;">R</b></div>
-                                      </a>
-                                      <a href="index-2.html#section3" class="scroll">
-                                        <div class="test3"><b style="color:#2976A9;font-size:20px;">A</b></div>
-                                      </a>
-                                      <a href="index-2.html#section2" class="scroll">
-                                        <div class="test4"><b style="color:#2976A9;font-size:20px;">M</b></div>
-                                      </a>
-                                      <a href="index-2.html#section1" class="scroll">
-                                        <div class="test5"><b style="color:#2976A9;font-size:20px;">S</b></div>
-                                      </a>
-                                      <div class="mask2">
-                                        <img src='image/menu.png' width='70' style='margin-top:-15px;margin-left:-10px;'>
-                                      </div>
-                                    </div>
+                                  <div class="parent2">
+                                     <div class="mask2"><img src='image/menu.png' class="image_mask"></div>
+                                  </div>
                               </p>
                           
                       </div>
@@ -98,7 +107,7 @@
                           <div class="col-md-12">
                               <p class="text-center">
                                   <div class="form-group">
-                                      <button class="btn btn-default btn-md center-block btn-send"><img src="image/send.png" class="image_send"></button>
+                                      <button class="btn btn-default btn-md center-block btn-send"><i class="glyphicon glyphicon-send image_send"></i></button>
                                   </div>
                               </p>
                           </div>
