@@ -1,77 +1,60 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Looping - fullPage.js</title>
-	<meta name="author" content="Alvaro Trigo Lopez" />
-	<meta name="description" content="fullPage looping demo." />
-	<meta name="keywords"  content="fullpage,jquery,looping,loop,loopTop,loopBottom,demo" />
-	<meta name="Resource-type" content="Document" />
-
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-	<link rel="stylesheet" type="text/css" href="css/examples.css" />
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<!--[if IE]>
-		<script type="text/javascript">
-			 var console = { log: function() {} };
-		</script>
-	<![endif]-->
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-
-	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
-	<script type="text/javascript" src="js/examples.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-				sectionsColor: ['', '', ''],
-				anchors: ['Time', 'Result', 'Accessibility','Mesureable','Simplicity'],
-				menu: '#menu',
-				loopTop: top,
-				loopBottom: false
-			});
-		});
-	</script>
-
-</head>
-<body>
-	<div class="menu_page1" style="position:fixed;background:rgba(255,255,255,1);width:100%;height:100vh;z-index:9999;text-align:center;display:none;">
-			
-			<img src="image/mouse.gif" style="position: absolute;
-   top: 50%;
-   left: 50%;
-   width: 100x;
-   height: 100px;
-   margin-top: -250px;">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>SmartSquare</title>
+      <meta name="author" content="Alvaro Trigo Lopez" />
+      <meta name="description" content="fullPage looping demo." />
+      <meta name="keywords"  content="fullpage,jquery,looping,loop,loopTop,loopBottom,demo" />
+      <meta name="Resource-type" content="Document" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+      <link rel="stylesheet" type="text/css" href="css/examples.css" />
+      <link rel="stylesheet" type="text/css" href="css/style.css" />
+      <!--[if IE]>
+      <script type="text/javascript">
+         var console = { log: function() {} };
+      </script>
+      <![endif]-->
+   </head>
+   <body>
+      <div class="modal_camera" style="display:none;">
+          <div class="row">
+              <div class="col-md-4 col-lg-offset-4">
+                  <div class="well-sm well_camera text-center">
+                      <img src="image/screen.jpg" class="img-responsive">
+                      <br>
+                      <button class="btn btn-sm btn-danger" style="margin-bottom:20px;">Take Snapshot</button>
+                      <button class="btn btn-sm btn-success" style="margin-bottom:20px;" id="save_photo">Save Photo</button>
+                      
+                  </div>
+              </div>
+          </div>
       </div>
-      <div class="menu_page" style="position:fixed;background:rgba(53, 125, 173,0.9);width:100%;height:100vh;z-index:9999;display:none;">
-
+      <div class="menu_page1" style="position:fixed;background:rgba(255,255,255,1);width:100%;height:100vh;z-index:9999;text-align:center;">
+         <img src="image/mouse.gif" style="position: absolute;top: 50%;left: 50%;width: 100x;height: 100px;margin-top: -250px;">
       </div>
-<p class="text-center" style="padding-right:4%;padding-top:1%;">
+      <div class="menu_page" style="position:fixed;background:rgba(53, 125, 173,0.99);width:100%;height:100vh;z-index:9999;display:none;">
+         <div class="row">
+            <div class="col-md-4 col-lg-offset-4" style="position:absolute;top:20%;">
+               <ul class="list-group list_menu">
+                  <li class="list-group-item" id="s">Simplicity</li>
+                  <li class="list-group-item" id="m">Mesureable</li>
+                  <li class="list-group-item" id="a">Accessibility</li>
+                  <li class="list-group-item" id="r">Result</li>
+                  <li class="list-group-item" id="t">Time & Again</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <p class="text-center" style="padding-right:4%;padding-top:1%;">
       <div class="parent2">
-         <a href="#intro4" class="scroll">
-            <div class="test1"><b style="color:#2976A9;font-size:20px;">T</b></div>
-         </a>
-         <a href="#intro3" class="scroll">
-            <div class="test2"><b style="color:#2976A9;font-size:20px;">R</b></div>
-         </a>
-         <a href="#intro2" class="scroll">
-            <div class="test3"><b style="color:#2976A9;font-size:20px;">A</b></div>
-         </a>
-         <a href="#intro1" class="scroll">
-            <div class="test4"><b style="color:#2976A9;font-size:20px;">M</b></div>
-         </a>
-         <a href="#intro" class="scroll">
-            <div class="test5"><b style="color:#2976A9;font-size:20px;">S</b></div>
-         </a>
-         <div class="mask2"><img src='image/menu.png' width='70' style='margin-top:-15px;margin-left:-10px;'></div>
+         <div class="mask2"><img src='image/menu.png' class="image_mask"></div>
       </div>
       </p>
-<a href="contact.html"><img src="image/contact.png" class="logo_contact pull-right"></a>
-<div class="page1">
+      <a href="contact.html"><img src="image/contact.png" class="logo_contact pull-right"></a>
+      <div class="page1">
          <div class="row">
             <div class="col-md-12">
                <div class="top">
@@ -97,131 +80,107 @@
             </div>
          </div>
       </div>
-<div id="fullpage">
-	
-	
-	
-	
-	
-	<div class="section" id="section4">
-		<div class="intro_delta">
-			<p>
-            	<h1 class="text1 text-center">Time & again</h1>
-            </p>
-			<p class="text-center">
-                <h3 class="text2 text-center">Everlasting loop</h3>
-            </p>
-		</div>
-		<div class="intro1">
-			<p>
-                <h5 class="text3" style="text-align:center;">Surprising is the best way </h5>
-                <h5 class="text3" style="text-align:center;">to strenghten relations.</h5>
-            </p>
-		</div>
-	</div>
-	<div class="section" id="section3">
-		<div class="intro">
-			<p>
-            	<h1 class="text1 text-center">Result</h1>
-            </p>
-			<p class="text-center">
-                <h3 class="text2 text-center">Ideas & Skills</h3>
-            </p>
-		</div>
-		<div class="intro1">
-			<p>
-                <h5 class="text3" style="text-align:center;">Having big ideas is a gift, </h5>
-                <h5 class="text3" style="text-align:center;">making them real is a skill.</h5>
-            </p>
-            <img src="image/r.gif" class="image_gif">
-		</div>
-	</div>
-	<div class="section" id="section2">
-		<div class="intro">
-			<p>
-            	<h1 class="text1 text-center">Accessibility</h1>
-            </p>
-			<p class="text-center">
-                <h3 class="text2 text-center">each on matter</h3>
-            </p>
-		</div>
-		<div class="intro1">
-			<p>
-                <h5 class="text3" style="text-align:center;">The feeling that everything  </h5>
-                <h5 class="text3" style="text-align:center;">is made (just) for you.</h5>
-            </p>
-            <img src="image/a.gif" class="image_gif">
-		</div>
-	</div>
-	<div class="section" id="section1">
-		<div class="intro_delta">
-			<p>
-            	<h1 class="text1 text-center">Mesureable</h1>
-            </p>
-			<p class="text-center">
-                <h3 class="text2 text-center">Significant</h3>
-            </p>
-		</div>
-		<div class="intro1">
-			<p>
-                <h5 class="text3" style="text-align:center;">Surprising is the best way  </h5>
-                <h5 class="text3" style="text-align:center;">to strenghten relations.</h5>
-            </p>
-		</div>
-	</div>
-	<div class="section " id="section0">
-		<div class="intro">
-			<p>
-            	<h1 class="text1 text-center">Simplicity</h1>
-            </p>
-			<p class="text-center">
-                <h3 class="text2 text-center">Less is more</h3>
-            </p>
-		</div>
-		<div class="intro1">
-			<p>
-                <h5 class="text3" style="text-align:center;">Compexity needs always </h5>
-                <h5 class="text3" style="text-align:center;">a simple expression.</h5>
-            </p>
-            <img src="image/s.gif" class="image_gif">
-		</div>
-	</div>
-</div>
 
-
-<script type="text/javascript">
-       
-          $(function(){
-              $('.mask2').click(function(){
-                  $('.menu_page').fadeToggle();
-              });
-          });
-        
-     </script>
-<script type="text/javascript">
-      $(function(){
-          var i= 0;
-          $('.mask2').click(function(){
-             
-              if(i % 2 == 0){
-                 
-                  $(this).html("<img src='image/menu1.png' width='70' style='margin-top:-15px;margin-left:-10px;'>");
-              }else{
-                $(this).html("<img src='image/menu.png' width='70' style='margin-top:-15px;margin-left:-10px;'>");
-              }
-              i=i+1;
-          });
-      });
-
-    </script>
-    <script type="text/javascript">
-        $(function(){
-            $('.menu_page1').delay(1500).slideUp(500);
-        });
-    </script>
-    <script type="text/javascript">
-        window.location.hash = "Simplicity";
-    </script>
-    
-</body>
+      <div id="fullpage">
+         <div class="section" id="section4">
+            <div class="intro">
+               <p>
+               <h1 class="text1 text-center">Time & again</h1>
+               </p>
+               <p class="text-center">
+               <h3 class="text2 text-center">Everlasting loop</h3>
+               </p>
+            </div>
+            <div class="intro1">
+               <p>
+               <h5 class="text3" style="text-align:center;">Surprising is the best way</h5>
+               <h5 class="text3" style="text-align:center;">to strenghten relations.</h5>
+               </p>
+               <img src="image/r.gif" class="image_gif">
+            </div>
+         </div>
+         <div class="section" id="section3">
+            <div class="intro">
+               <p>
+               <h1 class="text1 text-center">Result</h1>
+               </p>
+               <p class="text-center">
+               <h3 class="text2 text-center">Ideas & Skills</h3>
+               </p>
+            </div>
+            <div class="intro1">
+               <p>
+               <h5 class="text3" style="text-align:center;">Having big ideas is a gift, </h5>
+               <h5 class="text3" style="text-align:center;">making them real is a skill.</h5>
+               </p>
+               <img src="image/r.gif" class="image_gif">
+            </div>
+         </div>
+         <div class="section" id="section2">
+            <div class="circle center-block" style="background:#2976A9;width:100px;height:100px;margin-top:1%;border-radius:50%;">
+                <p class="text-center">
+                  <i class="fa fa-camera-retro fa-2x" id="click_camera"></i>
+               </p>
+            </div>
+            <div class="intro_nouveau">
+                
+               <p>
+               <h1 class="text1 text-center">Accessibility</h1>
+               </p>
+               <p class="text-center">
+               <h3 class="text2 text-center">each on matter</h3>
+               </p>
+               
+            </div>
+            <div class="intro_nouveau1">
+               <p>
+               <h5 class="text3" style="text-align:center;">The feeling that everything </h5>
+               <h5 class="text3" style="text-align:center;">is made (just) for you.
+               </h5>
+               </p>
+               <img src="image/a.gif" class="image_gif" id="image_user_camera">
+               <img src="image/user.png" style="display:none;" id="user_camera" width="200">
+            </div>
+         </div>
+         <div class="section" id="section1">
+            <div class="intro">
+               <p>
+               <h1 class="text1 text-center">Mesureable</h1>
+               </p>
+               <p class="text-center">
+               <h3 class="text2 text-center">Significant</h3>
+               </p>
+            </div>
+            <div class="intro1">
+               <p>
+               <h5 class="text3" style="text-align:center;">Surprising is the best way </h5>
+               <h5 class="text3" style="text-align:center;">to strenghten relations.</h5>
+               </p>
+               <img src="image/r.gif" class="image_gif">
+            </div>
+         </div>
+         <div class="section " id="section0">
+            <div class="intro">
+               <p>
+               <h1 class="text1 text-center">Simplicity</h1>
+               </p>
+               <p class="text-center">
+               <h3 class="text2 text-center">Less is more</h3>
+               </p>
+            </div>
+            <div class="intro1">
+               <p>
+               <h5 class="text3" style="text-align:center;">Compexity needs always </h5>
+               <h5 class="text3" style="text-align:center;">a simple expression.</h5>
+               </p>
+               <img src="image/s.gif" class="image_gif">
+            </div>
+         </div>
+      </div>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+      <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+      <script type="text/javascript" src="js/examples.js"></script>
+      <script type="text/javascript" src="js/plugin.js"></script>
+   </body>
 </html>
