@@ -79,12 +79,7 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 
 
 
-#click_camera{
-  position: absolute;
-   top: 10%;
-   left: 48.2%;
-   color: white;
-}
+
 
 @media only screen and (min-width : 320px) {
 .text1{
@@ -123,7 +118,9 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
    width: 150px;
    z-index: 9999999;
 }
-
+#user_camera{
+  width: 150px;
+}
 .logo_contact{
  
   top:35px;
@@ -144,16 +141,63 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     color: white;
     font-family: 'Montserrat Light', arial;
 }
+#click_camera{
+  position: absolute; /* <=== */
+  width: 100%;        /* <=== */
+  top:26%;
+  right: -1%;
+  color: white;
+  font-size: 35px;
+ 
+}
+.circle{
+  position: relative;  /* <=== */
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  margin-left: 5px;
+  margin-top: 80px;
+  text-align: center;
+  background: #2976A9;
+}
 
+.intro_nouveau{
+  margin-top:-13%;
+}
+.intro_nouveau1{
+  margin-top:100px;
+}
 
 }
 
 @media only screen and (min-width : 768px) {
+#click_camera{
+  position: absolute; /* <=== */
+  width: 100%;        /* <=== */
+  top:26%;
+  right: -1%;
+  color: white;
+  font-size: 35px;
+ 
+}
+.circle{
+  position: relative;  /* <=== */
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  margin-left: 5px;
+  margin-top: 5px;
+  text-align: center;
+  background: #2976A9;
+}
+
 .intro_nouveau{
-  margin-top:-3%;
+  margin-top:-5%;
 }
 .intro_nouveau1{
-  margin-top:170px;
+  margin-top:130px;
 }
 
 
@@ -187,6 +231,9 @@ line-height: 0px;
 .image_gif{
 	width: 200px;
 	margin-top: -13px;
+}
+#user_camera{
+  width: 200px;
 }
 .logo_logo{
    width: 200px;
