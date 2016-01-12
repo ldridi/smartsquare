@@ -3,6 +3,17 @@ window.location.hash = "Simplicity";
 $(document).ready(function() {
             $(window).on('hashchange', function(e){
             var x = window.location.hash;
+              if((x == '#Mesureable') || (x == '#Result') ){
+                 $('#user_camera').css('display','none');
+                 $('#image_user_camera').show();
+              }
+            });
+        });
+
+
+$(document).ready(function() {
+            $(window).on('hashchange', function(e){
+            var x = window.location.hash;
               if(x == '#Simplicity'){
                  $('#s').css('text-decoration','underline');
                  $('#m').css('text-decoration','none');
@@ -131,3 +142,36 @@ $(function(){
         $('#user_camera').show();
     });
 });
+
+
+
+$(document).ready(function() {
+            $(window).on('hashchange', function(e){
+            var x = window.location.hash;
+              if(x == '#Mesureable'){
+                  $('#gif_m').fadeIn();
+              }else{
+                 $('#gif_m').hide();
+              }
+
+              if(x == '#Accessibility'){
+                  $('#image_user_camera').fadeIn();
+              }else{
+                 $('#image_user_camera').hide();
+              }
+
+              if(x == '#Result'){
+                  $('#gif_r').fadeIn();
+              }else{
+                 $('#gif_r').hide();
+              }
+
+              if(x == '#Time'){
+                  $('#gif_t').fadeIn();
+              }else{
+                 $('#gif_t').hide();
+              }
+
+
+            });
+        });
